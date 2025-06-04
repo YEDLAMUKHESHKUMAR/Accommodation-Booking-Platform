@@ -1,3 +1,6 @@
+---------------------->  atlas : mukheshaditya
+---------------------->  render : mukhesh2004
+
 sessions : It stores session data on the server side, using a variety of different storage options .
 --> and allows you to track the activity of a user across requests.
 --> eg : whenever user trying to add some items into cart without logging in , then an unique session "id" will be created for that browser (in that id all the items which has been added by user to the cart will be stored ) , it  will be sent to the client server and stored using cookies  , and even user tries to redirect to some other page , the data stored in the form of cookies will not be deleted  . 
