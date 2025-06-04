@@ -60,6 +60,10 @@ async function main() {
   await mongoose.connect(dbUrl);
 }
 
+setTimeout(() => {
+  console.log("for render");
+}, 840000);
+
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   crypto: {
@@ -68,9 +72,9 @@ const store = MongoStore.create({
   touchAfter: 24 * 3600,
 });
 
-store.on("error",()=>{
-    console.log("ERROR in MONGO SESSION STORE",err);
-})
+store.on("error", () => {
+  console.log("ERROR in MONGO SESSION STORE", err);
+});
 
 const sessionOptions = {
   store,
